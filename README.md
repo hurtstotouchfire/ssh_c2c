@@ -2,16 +2,16 @@
 Convert an ssh command to an ssh config entry.
 
 ## Architecture overview
-Out of the gate, I'm hoping this will be some plain Ruby classes, tested with a
+Out of the gate, I'm hoping this will be some plain classes, tested with a
 data-driven testing approach, which just take a string input (the ssh command)
 and produce string output (the ssh config entry). On top of that, I'd like to
 have a one page jekyll site that exposes this functionality in a web app. In the
 long term, I'd like to extract the classes into a CL executable gem.
 
 ### Web App
-Hoping to use a terminal emulator theme. Sticking with vanilla jekyll, I would
+Hoping to use a terminal emulator theme. I would
 need a page reload to get the response, but it definitely seems preferable to
-have an endpoint I could hit with ajax. I think that probably means Heroku.
+have an endpoint I could hit with ajax. I think that probably means Heroku. Alternatively, I could implement all of the logic in JavaScript classes and do everything client side. That probably makes the most sense, but I hate testing JS so that needs some research.
 
 ### Testing
 I don't think CI is a priority out of the gate, but I would like to make the
@@ -35,6 +35,7 @@ just be a string-keyed hash.
 ## References
 ### DDT
 * https://en.wikipedia.org/wiki/Data-driven_testing
+* examples in Jasmine?
 
 ### jekyll
 * where did I put that nice tutorial that used ruby classes
